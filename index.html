@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desconsideração da Personalidade Jurídica (IDPJ) — Material Completo (ESA OAB + CPC + CC + CDC + Vault)</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --text: #0f172a;
+    --muted: #475569;
+    --border: #e2e8f0;
+    --primary: #1e3a8a;
+    --primary-light: #dbeafe;
+    --accent: #0284c7;
+    --law-bg: #fefce8;
+    --law-border: #ca8a04;
+    --warn-bg: #fef2f2;
+    --warn-border: #dc2626;
+    --ok-bg: #f0fdf4;
+    --ok-border: #16a34a;
+    --shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  }
+  [data-theme="dark"] {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-2: #0b1120;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #334155;
+    --primary: #60a5fa;
+    --primary-light: #1e3a8a;
+    --accent: #38bdf8;
+    --law-bg: #1c1917;
+    --law-border: #eab308;
+    --warn-bg: #2a1215;
+    --warn-border: #f87171;
+    --ok-bg: #052e16;
+    --ok-border: #4ade80;
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  header {
+    background: linear-gradient(135deg, #1e3a8a, #0369a1);
+    color: #ffffff;
+    padding: 28px 20px;
+    box-shadow: var(--shadow);
+  }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    display: inline-block; background: rgba(255,255,255,0.18);
+    padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 8px;
+  }
+  h1 { margin: 0 0 6px; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; }
+  .subtitle { margin: 0; opacity: 0.92; font-size: 0.95rem; }
+  .theme-btn {
+    background: rgba(255,255,255,0.16); color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.35); border-radius: 8px;
+    padding: 8px 14px; cursor: pointer; font-weight: 600; font-size: 13px;
+  }
+  nav.tabs {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .tabs-inner { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: thin; }
+  .tab-btn {
+    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+    padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px;
+    white-space: nowrap; transition: 0.15s;
+  }
+  .tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+  main { padding: 24px 0 60px; }
+  section.panel { display: none; }
+  section.panel.active { display: block; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  h2 { margin-top: 0; color: var(--primary); font-size: 1.3rem; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  h3 { color: var(--accent); font-size: 1.08rem; margin: 18px 0 8px; }
+  .law-box {
+    background: var(--law-bg); border-left: 4px solid var(--law-border);
+    border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 0.94rem;
+  }
+  .law-title { font-weight: 700; color: var(--law-border); margin-bottom: 6px; display: block; }
+  .callout-warn { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 13px 16px; margin: 12px 0; }
+  .callout-ok { background: var(--ok-bg); border-left: 4px solid var(--ok-border); border-radius: 8px; padding: 13px 16px; margin: 12px 0; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+  th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface-2); font-weight: 700; }
+  ul, ol { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .vault-ref {
+    font-size: 0.85rem; color: var(--muted); background: var(--surface-2);
+    padding: 3px 8px; border-radius: 6px; display: inline-block; margin-top: 4px;
+  }
+  .quiz-bar {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    background: var(--surface); border: 1px solid var(--border); padding: 14px 18px;
+    border-radius: 12px; margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .score-pill { font-weight: 700; font-size: 0.95rem; color: var(--primary); }
+  .reset-btn {
+    background: var(--surface-2); color: var(--text); border: 1px solid var(--border);
+    padding: 7px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px;
+  }
+  .q-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 16px; box-shadow: var(--shadow);
+  }
+  .q-head { font-weight: 700; margin-bottom: 12px; font-size: 0.98rem; }
+  .q-tag {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px;
+    border-radius: 999px; background: var(--primary-light); color: var(--primary); margin-right: 8px;
+  }
+  .opt-btn {
+    display: block; width: 100%; text-align: left; background: var(--surface-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px;
+    cursor: pointer; font-size: 0.93rem; transition: 0.15s;
+  }
+  .opt-btn:hover:not(:disabled) { border-color: var(--accent); }
+  .opt-btn.correct { background: var(--ok-bg); border-color: var(--ok-border); font-weight: 600; }
+  .opt-btn.wrong { background: var(--warn-bg); border-color: var(--warn-border); }
+  .q-exp {
+    display: none; margin-top: 10px; padding: 12px 14px; border-radius: 8px;
+    background: var(--surface-2); border-left: 4px solid var(--accent); font-size: 0.9rem;
+  }
+  .q-exp.show { display: block; }
+  footer {
+    text-align: center; color: var(--muted); font-size: 0.85rem; padding: 20px 16px 40px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-top">
+      <div>
+        <span class="badge">ESA Nacional · Processo Civil · Aula 07 · Teses dos Tribunais + Vault Obsidian</span>
+        <h1>Desconsideração da Personalidade Jurídica (IDPJ)</h1>
+        <p class="subtitle">Aula Prof. Guilherme Hartmann integrada com Doutrina (Elpídio Donizetti), Concurso, CPC (arts. 133–137, 1.015, IV e 1.062), CC (art. 50), CDC (art. 28), CF/88 (art. 5º, LV) e Lei 9.099/95 · 50 Questões Comentadas</p>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">Modo Escuro</button>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="container tabs-inner">
+    <button class="tab-btn active" onclick="openTab('tab1', this)">1. Fundamentos &amp; Teorias</button>
+    <button class="tab-btn" onclick="openTab('tab2', this)">2. Modalidades &amp; Sócios</button>
+    <button class="tab-btn" onclick="openTab('tab3', this)">3. Procedimento do IDPJ</button>
+    <button class="tab-btn" onclick="openTab('tab4', this)">4. Jurisprudência STJ &amp; Juizados</button>
+    <button class="tab-btn" onclick="openTab('tab5', this)">5. Quadros &amp; Pegadinhas</button>
+    <button class="tab-btn" onclick="openTab('tab6', this)">6. Bateria (50 Questões)</button>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- ABA 1 -->
+  <section id="tab1" class="panel active">
+    <div class="card">
+      <h2>1. Separação Patrimonial, Abuso e Fundamento Constitucional</h2>
+      <p>No Direito Empresarial e Civil, a regra geral é a <strong>autonomia e separação patrimonial</strong> entre a pessoa jurídica e seus sócios (ex.: na sociedade limitada). As dívidas contraídas pela empresa devem ser satisfeitas com o <strong>patrimônio da própria sociedade</strong>, protegendo-se os bens pessoais dos sócios para incentivar o empreendedorismo e o desenvolvimento econômico.</p>
+      <p><strong>Exceção — Desconsideração (<em>Disregard of Legal Entity</em>):</strong> Quando a autonomia patrimonial é desviada para lesar credores ou praticar abusos, afasta-se <strong>temporariamente</strong> a barreira patrimonial (sem extinguir a pessoa jurídica — <em>ampliação subjetiva da responsabilidade patrimonial</em>, segundo Elpídio Donizetti), permitindo atingir o patrimônio dos sócios/administradores ou de outra entidade.</p>
+      <p><strong>Papel do CPC/2015:</strong> Antes de 2015, era frequente redirecionar a execução contra os sócios por simples petição, sem contraditório prévio. O CPC/2015 classificou o <strong>IDPJ</strong> como modalidade de <strong>intervenção de terceiros</strong> (arts. 133 a 137), justamente para efetivar o <strong>contraditório e a ampla defesa</strong> antes de atingir bens de terceiros.</p>
+
+      <div class="law-box">
+        <span class="law-title">Constituição Federal — Art. 5º, inciso LV</span>
+        <p><strong>Art. 5º, LV</strong> – aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes;</p>
+      </div>
+      <span class="vault-ref">Fontes: Aula 07 ESA (Prof. Hartmann) · Elpídio Donizetti (Cap. 5 — Intervenção de Terceiros) · CF/88</span>
+    </div>
+
+    <div class="card">
+      <h2>2. Teoria Maior (Código Civil) vs. Teoria Menor (CDC)</h2>
+
+      <h3>Teoria Maior — Regra Geral (Art. 50 do Código Civil)</h3>
+      <p>Exige a demonstração de <strong>abuso da personalidade jurídica</strong>, caracterizado por <strong>desvio de finalidade</strong> ou <strong>confusão patrimonial</strong>, além da insuficiência patrimonial/insolvência da pessoa jurídica (destacada em julgado de 2025 do TJ/RJ citado na aula). A redação atual (Lei da Liberdade Econômica — Lei nº 13.874/2019) definiu objetivamente ambos os requisitos e restringiu a extensão aos bens particulares de administradores ou sócios <strong>beneficiados direta ou indiretamente</strong> pelo abuso.</p>
+
+      <div class="law-box">
+        <span class="law-title">Código Civil — Art. 50 (Redação Vigente no Vault)</span>
+        <p><strong>Art. 50.</strong> Em caso de abuso da personalidade jurídica, caracterizado pelo desvio de finalidade ou pela confusão patrimonial, pode o juiz, a requerimento da parte, ou do Ministério Público quando lhe couber intervir no processo, desconsiderá-la para que os efeitos de certas e determinadas relações de obrigações sejam estendidos aos bens particulares de administradores ou de sócios da pessoa jurídica beneficiados direta ou indiretamente pelo abuso.<br>
+        <strong>§ 1º</strong> Para os fins do disposto neste artigo, desvio de finalidade é a utilização da pessoa jurídica com o propósito de lesar credores e para a prática de atos ilícitos de qualquer natureza.<br>
+        <strong>§ 2º</strong> Entende-se por confusão patrimonial a ausência de separação de fato entre os patrimônios, caracterizada por:<br>
+        I – cumprimento repetitivo pela sociedade de obrigações do sócio ou do administrador ou vice-versa;<br>
+        II – transferência de ativos ou de passivos sem efetivas contraprestações, exceto os de valor proporcionalmente insignificante; e<br>
+        III – outros atos de descumprimento da autonomia patrimonial.<br>
+        <strong>§ 3º</strong> O disposto no caput e nos §§ 1º e 2º deste artigo também se aplica à extensão das obrigações de sócios ou de administradores à pessoa jurídica.<br>
+        <strong>§ 4º</strong> A mera existência de grupo econômico sem a presença dos requisitos de que trata o caput deste artigo não autoriza a desconsideração da personalidade da pessoa jurídica.<br>
+        <strong>§ 5º</strong> Não constitui desvio de finalidade a mera expansão ou a alteração da finalidade original da atividade econômica específica da pessoa jurídica.</p>
+      </div>
+
+      <h3>Teoria Menor — Relações de Consumo (Art. 28, § 5º, do CDC)</h3>
+      <p>Nas relações consumeristas, prevalece a <strong>Teoria Menor</strong> (STJ): o consumidor <strong>não precisa provar desvio de finalidade nem confusão patrimonial</strong>. Basta que a personalidade jurídica constitua <strong>obstáculo ao ressarcimento</strong> dos prejuízos (ex.: inexistência de bens da pessoa jurídica fornecedora).</p>
+
+      <div class="law-box">
+        <span class="law-title">Código de Defesa do Consumidor — Art. 28</span>
+        <p><strong>Art. 28.</strong> O juiz poderá desconsiderar a personalidade jurídica da sociedade quando, em detrimento do consumidor, houver abuso de direito, excesso de poder, infração da lei, fato ou ato ilícito ou violação dos estatutos ou contrato social. A desconsideração também será efetivada quando houver falência, estado de insolvência, encerramento ou inatividade da pessoa jurídica provocados por má administração.<br>
+        <strong>§ 1º</strong> (Vetado)<br>
+        <strong>§ 2º</strong> As sociedades integrantes dos grupos societários e as sociedades controladas, são subsidiariamente responsáveis pelas obrigações decorrentes deste Código.<br>
+        <strong>§ 3º</strong> As sociedades consorciadas são solidariamente responsáveis pelas obrigações decorrentes deste Código.<br>
+        <strong>§ 4º</strong> As sociedades coligadas só responderão por culpa.<br>
+        <strong>§ 5º</strong> Também poderá ser desconsiderada a pessoa jurídica sempre que sua personalidade for, de alguma forma, obstáculo ao ressarcimento de prejuízos causados aos consumidores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABA 2 -->
+  <section id="tab2" class="panel">
+    <div class="card">
+      <h2>3. Modalidades Especiais de Desconsideração</h2>
+      <p>O procedimento do IDPJ (CPC, arts. 133 a 137) aplica-se não apenas à desconsideração direta, mas a todas as modalidades especiais (<strong>Enunciado 11 do CJF</strong>):</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Modalidade</th><th>Mecanismo</th><th>Fundamento e Exemplos</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Direta (Tradicional)</strong></td>
+              <td>Dívida da <strong>PJ</strong> → atinge bens pessoais dos <strong>sócios/administradores</strong></td>
+              <td>Art. 50, caput, CC e art. 133, CPC. Ex.: empresa fecha irregularmente e sócios abrem outra no mesmo ramo para fraudar credores.</td>
+            </tr>
+            <tr>
+              <td><strong>Inversa</strong></td>
+              <td>Dívida pessoal do <strong>sócio</strong> → atinge bens da <strong>pessoa jurídica</strong></td>
+              <td>Art. 133, § 2º, CPC e art. 50, § 3º, CC (STJ, REsp 948.117/MS e REsp 1.236.916/RS). Ex.: sócio contrai empréstimo pessoal e integraliza/oculta patrimônio na sociedade.</td>
+            </tr>
+            <tr>
+              <td><strong>Expansiva</strong></td>
+              <td>Dívida da <strong>PJ</strong> → atinge bens do <strong>sócio oculto</strong></td>
+              <td>Atinge o verdadeiro proprietário que se esconde atrás de "laranjas" ou testas de ferro no contrato social.</td>
+            </tr>
+            <tr>
+              <td><strong>Indireta (Econômica)</strong></td>
+              <td>Dívida de uma <strong>empresa</strong> → atinge bens de <strong>outra empresa do mesmo grupo econômico</strong></td>
+              <td>Art. 50, § 4º, CC. <strong>STJ (fev./2025):</strong> a simples integração em grupo econômico <em>não</em> autoriza desconsideração nem responsabilidade solidária sem prova dos requisitos legais.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout-warn">
+        <strong>Atenção — Grupo Econômico (Art. 50, § 4º, CC e STJ fev./2025):</strong> A mera existência de grupo econômico, por si só, <strong>não autoriza</strong> a desconsideração da personalidade jurídica nem a responsabilização solidária de empresas coligadas/controladas. É indispensável comprovar o abuso da personalidade (desvio de finalidade ou confusão patrimonial).
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4. Responsabilidade de Sócios Majoritários vs. Minoritários</h2>
+      <p>Ao deferir a desconsideração, o patrimônio atingido não é automaticamente o de todo e qualquer integrante do quadro societário:</p>
+      <ul>
+        <li><strong>Entendimento consolidado do STJ (2024):</strong> Em regra, a desconsideração alcança apenas os <strong>sócios administradores</strong>, os <strong>sócios majoritários</strong> ou aqueles que <strong>comprovadamente contribuíram</strong> para a prática dos atos de abuso ou fraude (em sintonia com o art. 50, caput, CC: <em>"beneficiados direta ou indiretamente pelo abuso"</em>).</li>
+        <li><strong>Proteção ao Sócio Minoritário:</strong> O sócio minoritário (ex.: 1% das quotas) que não exerce atos de administração nem participou da fraude possui fundamento defensivo sólido para excluir seu patrimônio pessoal da constrição.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABA 3 -->
+  <section id="tab3" class="panel">
+    <div class="card">
+      <h2>5. Procedimento do IDPJ no CPC/2015 (Arts. 133 a 137)</h2>
+      <ol>
+        <li><strong>Legitimidade (art. 133):</strong> Exclusivamente a requerimento da <strong>parte</strong> ou do <strong>Ministério Público</strong> quando lhe couber intervir. <strong>É vedada a instauração de ofício pelo juiz.</strong></li>
+        <li><strong>Cabimento amplo (art. 134):</strong> Em todas as fases do processo de conhecimento, no cumprimento de sentença e na execução de título extrajudicial.</li>
+        <li><strong>Requerimento na Petição Inicial vs. Incidental (art. 134, §§ 1º a 4º):</strong>
+          <ul>
+            <li><em>Na Petição Inicial (§ 2º):</em> Dispensa incidente autônomo e <strong>não suspende</strong> o processo; o sócio ou a PJ já é citado diretamente.</li>
+            <li><em>Incidental (§§ 1º e 3º):</em> Autuado em separado (em regra com custas próprias), comunicado imediatamente ao distribuidor.</li>
+          </ul>
+        </li>
+        <li><strong>Citação e Defesa (art. 135):</strong> O sócio ou a pessoa jurídica é citado para se manifestar e requerer as provas cabíveis no prazo de <strong>15 dias úteis</strong>.</li>
+        <li><strong>Decisão e Recurso (art. 136 e art. 1.015, IV):</strong> Resolvido por <strong>decisão interlocutória</strong>, recorrível por <strong>Agravo de Instrumento</strong> (1º grau) ou <strong>Agravo Interno</strong> (se proferida pelo relator em tribunal). Se pedido na inicial e decidido na sentença, cabe apelação.</li>
+        <li><strong>Fraude à Execução (art. 137):</strong> Acolhido o pedido, a alienação ou oneração de bens em fraude à execução é <strong>ineficaz</strong> em relação ao requerente (com eficácia <em>ex tunc</em>, segundo Elpídio Donizetti).</li>
+      </ol>
+
+      <div class="law-box">
+        <span class="law-title">CPC — Arts. 133 a 137 e Art. 1.015, IV</span>
+        <p><strong>Art. 133.</strong> O incidente de desconsideração da personalidade jurídica será instaurado a pedido da parte ou do Ministério Público, quando lhe couber intervir no processo.<br>
+        <strong>§ 1º</strong> O pedido de desconsideração da personalidade jurídica observará os pressupostos previstos em lei.<br>
+        <strong>§ 2º</strong> Aplica-se o disposto neste Capítulo à hipótese de desconsideração inversa da personalidade jurídica.</p>
+        <p><strong>Art. 134.</strong> O incidente de desconsideração é cabível em todas as fases do processo de conhecimento, no cumprimento de sentença e na execução fundada em título executivo extrajudicial.<br>
+        <strong>§ 1º</strong> A instauração do incidente será imediatamente comunicada ao distribuidor para as anotações devidas.<br>
+        <strong>§ 2º</strong> Dispensa-se a instauração do incidente se a desconsideração da personalidade jurídica for requerida na petição inicial, hipótese em que será citado o sócio ou a pessoa jurídica.<br>
+        <strong>§ 3º</strong> A instauração do incidente suspenderá o processo, salvo na hipótese do § 2º.<br>
+        <strong>§ 4º</strong> O requerimento deve demonstrar o preenchimento dos pressupostos legais específicos para desconsideração da personalidade jurídica.</p>
+        <p><strong>Art. 135.</strong> Instaurado o incidente, o sócio ou a pessoa jurídica será citado para manifestar-se e requerer as provas cabíveis no prazo de 15 (quinze) dias.</p>
+        <p><strong>Art. 136.</strong> Concluída a instrução, se necessária, o incidente será resolvido por decisão interlocutória.<br>
+        <strong>Parágrafo único.</strong> Se a decisão for proferida pelo relator, cabe agravo interno.</p>
+        <p><strong>Art. 137.</strong> Acolhido o pedido de desconsideração, a alienação ou a oneração de bens, havida em fraude de execução, será ineficaz em relação ao requerente.</p>
+        <p><strong>Art. 1.015.</strong> Cabe agravo de instrumento contra as decisões interlocutórias que versarem sobre: (...) <strong>IV</strong> – incidente de desconsideração da personalidade jurídica;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABA 4 -->
+  <section id="tab4" class="panel">
+    <div class="card">
+      <h2>6. Suspensão do Processo de Execução (Art. 134, § 3º, CPC)</h2>
+      <p>Embora o texto literal do art. 134, § 3º, do CPC disponha que a instauração do incidente suspenderá o processo, a jurisprudência temperou a regra na fase executiva:</p>
+      <div class="callout-ok">
+        <strong>STJ (fev./2025) e Enunciado 110 do CJF (II JDPC):</strong> A instauração do IDPJ <strong>não suspende</strong> a tramitação do processo de execução ou do cumprimento de sentença <strong>contra os executados originários</strong>. Assim, o credor pode instaurar o IDPJ contra os sócios e, <em>simultaneamente</em>, prosseguir com medidas de busca patrimonial contra a pessoa jurídica devedora.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>7. Preclusão e Reapresentação de Pedido de Desconsideração</h2>
+      <p>Conforme entendimento do <strong>STJ (2024)</strong>:</p>
+      <ul>
+        <li><strong>Decisão de mérito transitada em julgado:</strong> Se o IDPJ foi indeferido no mérito e a parte não recorreu (ou teve o recurso desprovido), opera-se a <strong>preclusão</strong>, inviabilizando novo pedido baseado nos <strong>mesmos fatos / mesma causa de pedir</strong>.</li>
+        <li><strong>Fatos novos / nova causa de pedir:</strong> É perfeitamente possível formular novo requerimento de desconsideração se fundado em <strong>fatos novos</strong> ou nova causa de pedir.</li>
+        <li><strong>Extinção sem resolução de mérito (questão processual):</strong> Se o primeiro incidente foi extinto por vício meramente processual (ex.: ausência de recolhimento de custas), <strong>não há impedimento</strong> para a formulação de novo requerimento.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>8. IDPJ nos Juizados Especiais Cíveis</h2>
+      <p>Apesar de o art. 10 da Lei nº 9.099/1995 vedar qualquer forma de intervenção de terceiros ou assistência nos Juizados Especiais, o <strong>art. 1.062 do CPC</strong> trouxe previsão expressa autorizando o IDPJ nesse microssistema.</p>
+
+      <div class="law-box">
+        <span class="law-title">CPC Art. 1.062 e Lei nº 9.099/1995 Art. 10</span>
+        <p><strong>Art. 1.062 (CPC).</strong> O incidente de desconsideração da personalidade jurídica aplica-se ao processo de competência dos juizados especiais.</p>
+        <p><strong>Art. 10 (Lei nº 9.099/1995).</strong> Não se admitirá, no processo, qualquer forma de intervenção de terceiro nem de assistência. Admitir-se-á o litisconsórcio.</p>
+      </div>
+
+      <p><strong>Recorribilidade nos Juizados (Vault — Elpídio Donizetti):</strong> Se o pedido for feito na inicial e decidido na sentença, cabe <strong>recurso inominado</strong>; se decidido incidentalmente na execução, admite-se <strong>Mandado de Segurança perante a Turma Recursal</strong> (Súmula 376/STJ) ou agravo onde previsto em regimento.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Honorários Advocatícios Sucumbenciais no IDPJ</h2>
+      <ul>
+        <li><strong>Jurisprudência tradicional do STJ:</strong> Não admitia condenação em honorários sucumbenciais em incidentes processuais (ex.: REsp 1.845.536/SC).</li>
+        <li><strong>Mudança na Corte Especial do STJ (REsp 2.072.206 — 2025, Vault):</strong> Passou-se a admitir a fixação de <strong>honorários sucumbenciais no indeferimento/rejeição</strong> do IDPJ quando houver <strong>contraditório efetivamente desenvolvido</strong>, remunerando a atividade laboral do advogado do terceiro indevidamente acionado pelo princípio da causalidade.</li>
+        <li><strong>Dica prática (Prof. Hartmann):</strong> Sempre que houver contraditório desenvolvido no IDPJ, requerer expressamente a fixação de honorários sucumbenciais em favor do advogado vencedor.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABA 5 -->
+  <section id="tab5" class="panel">
+    <div class="card">
+      <h2>10. Quadro Comparativo: Teoria Maior vs. Teoria Menor</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Aspecto</th><th>Teoria Maior (CC, art. 50)</th><th>Teoria Menor (CDC, art. 28, § 5º)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Âmbito</strong></td><td>Relações civis e empresariais (regra geral)</td><td>Relações de consumo (e ambiental)</td></tr>
+            <tr><td><strong>Abuso (Desvio ou Confusão)</strong></td><td>Exigido (prova obrigatória pelo requerente)</td><td>Dispensado</td></tr>
+            <tr><td><strong>Insolvência / Obstáculo</strong></td><td>Necessária insuficiência patrimonial + abuso</td><td>Basta a PJ ser obstáculo ao ressarcimento</td></tr>
+            <tr><td><strong>Grupo Econômico</strong></td><td>Mera existência não basta (§ 4º)</td><td>Sociedades controladas/grupos respondem subsidiariamente (§ 2º); consorciadas, solidariamente (§ 3º); coligadas, por culpa (§ 4º)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>11. Mapa Rápido de Pegadinhas de Prova</h2>
+      <ul>
+        <li><strong>Instauração de ofício:</strong> <strong>VEDADA</strong> pelo art. 133 do CPC (depende de requerimento da parte ou do MP quando intervenha).</li>
+        <li><strong>Pedido na inicial (art. 134, § 2º):</strong> <strong>Dispensa</strong> incidente autônomo e <strong>não suspende</strong> o processo.</li>
+        <li><strong>Suspensão na execução (art. 134, § 3º + STJ fev./2025 + Enun. 110/CJF):</strong> Não suspende a execução contra os executados originários (buscas patrimoniais contra a PJ podem continuar).</li>
+        <li><strong>Grupo econômico (art. 50, § 4º, CC):</strong> Por si só <strong>não</strong> autoriza desconsideração nem responsabilidade solidária.</li>
+        <li><strong>Expansão da atividade (art. 50, § 5º, CC):</strong> Mera expansão ou alteração da finalidade original <strong>não</strong> configura desvio de finalidade.</li>
+        <li><strong>Sócio minoritário (STJ, 2024):</strong> Em regra, não é atingido se não for administrador nem tiver contribuído para o abuso/fraude.</li>
+        <li><strong>Preclusão (STJ, 2024):</strong> Indeferimento no mérito transitado em julgado impede novo pedido pelos <em>mesmos fatos</em>; admite-se novo pedido com <em>fatos novos</em> ou se extinto sem mérito.</li>
+        <li><strong>Juizados Especiais:</strong> IDPJ é expressamente <strong>cabível</strong> (art. 1.062, CPC), mesmo diante do art. 10 da Lei nº 9.099/1995.</li>
+        <li><strong>Recursos (art. 136 e art. 1.015, IV):</strong> Decisão interlocutória de 1º grau → <strong>Agravo de Instrumento</strong>; decisão do relator → <strong>Agravo Interno</strong>.</li>
+        <li><strong>Honorários no IDPJ (STJ, Corte Especial, REsp 2.072.206):</strong> Cabíveis na rejeição do incidente com contraditório desenvolvido.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABA 6 -->
+  <section id="tab6" class="panel">
+    <div class="quiz-bar">
+      <div class="score-pill" id="scoreBox">Respondidas: 0 / 50 · Acertos: 0</div>
+      <button class="reset-btn" onclick="resetQuiz()">Reiniciar Bateria</button>
+    </div>
+    <div id="quizContainer"></div>
+  </section>
+
+</main>
+
+<footer>
+  Material de Estudo Autossuficiente · Fontes Internas do Vault Obsidian (CF/88, CPC arts. 133–137, 1.015 e 1.062, CC art. 50, CDC art. 28, Lei 9.099/95 art. 10, Doutrina Elpídio Donizetti, Concurso e Aula 07 ESA Nacional — Prof. Guilherme Hartmann).
+</footer>
+
+<script>
+function toggleTheme() {
+  const dark = document.documentElement.getAttribute("data-theme") === "dark";
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+  document.getElementById("themeBtn").textContent = dark ? "Modo Escuro" : "Modo Claro";
+}
+
+function openTab(id, btn) {
+  document.querySelectorAll("section.panel").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll("button.tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+const QUESTIONS = [
+  // 1-25: Tópicos da Aula 07 ESA (Prof. Guilherme Hartmann)
+  { tag: "Aula ESA", q: "Qual é a principal característica da Teoria Maior da desconsideração da personalidade jurídica segundo o art. 50 do Código Civil?", opts: ["Permite a desconsideração apenas com a comprovação de inadimplemento.", "Dispensa qualquer prova de abuso ou fraude.", "Exige a prova do abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial.", "Aplica-se exclusivamente às relações de consumo.", "Extingue definitivamente a pessoa jurídica."], ans: 2, exp: "CC, art. 50, caput: a Teoria Maior exige prova de abuso da personalidade jurídica (desvio de finalidade ou confusão patrimonial)." },
+  { tag: "Aula ESA", q: "O que é necessário para a formulação de um novo requerimento de desconsideração da personalidade jurídica se o pedido anterior foi negado no mérito com trânsito em julgado?", opts: ["Nada é necessário, podendo repetir os mesmos fundamentos.", "Basta mudar o advogado da parte.", "Apenas pedir novamente após 30 dias.", "É necessário trazer fatos novos ou nova causa de pedir.", "É preciso aguardar carência de cinco anos."], ans: 3, exp: "STJ (2024): transitada em julgado a decisão de mérito do IDPJ, opera-se preclusão quanto aos mesmos fatos; novo pedido exige fatos novos ou nova causa de pedir." },
+  { tag: "Aula ESA", q: "De acordo com o CPC/2015, qual é a classificação processual do Incidente de Desconsideração da Personalidade Jurídica (IDPJ)?", opts: ["Ação rescisória autônoma.", "Modalidade de intervenção de terceiros.", "Procedimento especial de jurisdição voluntária.", "Recurso extraordinário.", "Medida cautelar preparatória obrigatória."], ans: 1, exp: "O CPC/2015 inseriu o IDPJ (arts. 133 a 137) no Título III — Da Intervenção de Terceiros." },
+  { tag: "Aula ESA", q: "Qual é o prazo estabelecido no art. 135 do CPC para o sócio ou a pessoa jurídica citada apresentar resposta e requerer provas no IDPJ?", opts: ["20 dias úteis.", "5 dias úteis.", "10 dias úteis.", "30 dias úteis.", "15 dias úteis."], ans: 4, exp: "CPC, art. 135: o sócio ou a pessoa jurídica será citado para manifestar-se e requerer as provas cabíveis no prazo de 15 dias." },
+  { tag: "Aula ESA", q: "Qual é a diferença fundamental entre a desconsideração inversa e a desconsideração tradicional (direta)?", opts: ["A tradicional só vale para dívidas fiscais.", "A desconsideração inversa atinge o patrimônio da pessoa jurídica por dívida pessoal do sócio devedor.", "A inversa dispensa a instauração do IDPJ.", "A inversa não exige comprovação dos requisitos legais.", "A inversa só se aplica a sociedades anônimas."], ans: 1, exp: "CPC, art. 133, § 2º, e CC, art. 50, § 3º: a desconsideração inversa estende obrigações pessoais de sócios ou administradores à pessoa jurídica." },
+  { tag: "Aula ESA", q: "Qual é a função excepcional da desconsideração da personalidade jurídica no sistema do Código Civil?", opts: ["Desconsiderar automaticamente todas as sociedades limitadas.", "Garantir irresponsabilidade absoluta aos administradores.", "Impedir a criação de novas empresas.", "Afastar temporariamente a separação patrimonial em casos de abuso para responsabilizar bens particulares de sócios/administradores.", "Converter dívidas civis em penais."], ans: 3, exp: "A regra é a separação patrimonial; excepcionalmente, havendo abuso (art. 50, CC), amplia-se a responsabilidade patrimonial." },
+  { tag: "Aula ESA", q: "Qual é a implicação da preclusão no pedido de desconsideração da personalidade jurídica segundo o STJ (2024)?", opts: ["A preclusão impede novo pedido mesmo com fatos novos.", "A preclusão se aplica inclusive quando o incidente anterior foi extinto sem mérito por falta de custas.", "A preclusão é irrelevante no IDPJ.", "A preclusão autoriza repetir os mesmos fatos em outro incidente.", "O trânsito em julgado da decisão de mérito inviabiliza deduzir novo requerimento com base nos mesmos fatos."], ans: 4, exp: "STJ (2024): decisão de mérito transitada em julgado gera preclusão para os mesmos fundamentos, ressalvados fatos novos ou extinção anterior sem mérito." },
+  { tag: "Aula ESA", q: "Segundo o entendimento do STJ (fev./2025) e o Enunciado 110 do CJF sobre o art. 134, § 3º, do CPC, como deve ser a atuação quanto à busca patrimonial contra a empresa executada após instaurar o IDPJ?", opts: ["Deve-se paralisar totalmente a execução contra a empresa.", "É proibido realizar buscas patrimoniais enquanto tramita o IDPJ.", "Só se pode buscar bens da empresa após julgado o agravo de instrumento.", "Pode-se instaurar o IDPJ e, simultaneamente, prosseguir com a busca patrimonial contra o executado originário.", "A busca patrimonial fica restrita aos bens dos sócios."], ans: 3, exp: "STJ (fev./2025) e Enunciado 110/CJF: o IDPJ não suspende a execução ou o cumprimento de sentença contra os executados originários." },
+  { tag: "Aula ESA", q: "Qual é a posição do STJ (2024) sobre o alcance da desconsideração da personalidade jurídica em relação aos sócios minoritários?", opts: ["A desconsideração não alcança sócios administradores.", "Todos os sócios, independentemente de percentual ou gestão, respondem automaticamente.", "Somente os sócios minoritários são responsabilizados.", "Os sócios minoritários respondem sempre solidariamente.", "Em regra, alcança apenas os sócios administradores, majoritários ou que comprovadamente contribuíram para o abuso ou fraude."], ans: 4, exp: "STJ (2024) c/c art. 50, caput, CC: protege-se o sócio minoritário que não exerce administração nem participou dos atos abusivos." },
+  { tag: "Aula ESA", q: "Como o art. 1.062 do CPC se relaciona com o art. 10 da Lei nº 9.099/1995 nos Juizados Especiais?", opts: ["Autoriza expressamente a aplicação do IDPJ nos Juizados Especiais, excepcionando a vedação geral às intervenções de terceiros.", "Proíbe o IDPJ nos Juizados Especiais.", "Revogou integralmente a Lei nº 9.099/1995.", "Aplica-se apenas aos Juizados Criminais.", "Dispensa o contraditório nos Juizados Especiais."], ans: 0, exp: "CPC, art. 1.062: 'O incidente de desconsideração da personalidade jurídica aplica-se ao processo de competência dos juizados especiais.'" },
+  { tag: "Aula ESA", q: "Qual é a principal tese defensiva de um sócio minoritário para afastar o atingimento de seu patrimônio pessoal no IDPJ?", opts: ["Alegar apenas que a empresa possui dívidas antigas.", "Demonstrar que não exerce atos de administração nem participou ou se beneficiou dos atos de abuso/fraude.", "Alegar que detém mais de 50% das quotas.", "Pedir a falência da sociedade.", "Recusar-se a receber a citação."], ans: 1, exp: "STJ (2024) e art. 50, caput, CC: exige-se vínculo com a administração, controle ou benefício/contribuição no abuso." },
+  { tag: "Aula ESA", q: "Qual é a principal finalidade constitucional da formalização do IDPJ no CPC/2015?", opts: ["Impor sanções administrativas à empresa.", "Garantir o exercício do contraditório e da ampla defesa (art. 5º, LV, CF/88) antes de atingir patrimônio de terceiro.", "Eliminar a fase de execução.", "Substituir o contrato social.", "Aumentar o valor das custas judiciais."], ans: 1, exp: "O IDPJ assegura contraditório prévio (art. 5º, LV, CF/88) antes da responsabilização patrimonial de sócios ou outras pessoas jurídicas." },
+  { tag: "Aula ESA", q: "Qual é a proteção básica conferida pela separação patrimonial em uma sociedade limitada?", opts: ["Os credores acessam diretamente os bens pessoais dos sócios.", "Não há distinção entre bens da empresa e bens dos sócios.", "O patrimônio da sociedade não se confunde com o patrimônio pessoal dos sócios, protegendo-os, em regra, das dívidas empresariais.", "Os sócios respondem por dívidas pessoais uns dos outros.", "A empresa fica isenta de pagar seus próprios credores."], ans: 2, exp: "A autonomia patrimonial separa o patrimônio societário do patrimônio pessoal dos sócios, incentivando o empreendedorismo." },
+  { tag: "Aula ESA", q: "Qual é o efeito prático imediato do deferimento do IDPJ na modalidade direta?", opts: ["A dissolução imediata da sociedade na Junta Comercial.", "O patrimônio particular do sócio/administrador alcançado passa a responder pela dívida da sociedade.", "A extinção da dívida da pessoa jurídica.", "A perda da personalidade jurídica para todos os demais contratos.", "A transferência da dívida para o Estado."], ans: 1, exp: "A desconsideração é episódica: mantém a PJ existente, mas estende a responsabilidade patrimonial ao sócio para aquela obrigação." },
+  { tag: "Aula ESA", q: "Em qual artigo do Código de Defesa do Consumidor (CDC) está prevista a desconsideração da personalidade jurídica?", opts: ["Art. 28 do CDC.", "Art. 12 do CDC.", "Art. 15 do CDC.", "Art. 30 do CDC.", "Art. 50 do CDC."], ans: 0, exp: "CDC, art. 28 (especialmente o § 5º, que consagra a Teoria Menor)." },
+  { tag: "Aula ESA", q: "Qual era a posição tradicional do STJ sobre honorários advocatícios sucumbenciais no IDPJ e qual foi a virada na Corte Especial (REsp 2.072.206)?", opts: ["Sempre coube honorários em todos os incidentes sem exceção.", "Tradicionalmente não incidiam honorários em incidentes (REsp 1.845.536/SC), mas a Corte Especial passou a admiti-los na rejeição do IDPJ quando há contraditório desenvolvido.", "Nunca cabe honorários nem mesmo na rejeição do IDPJ.", "Os honorários são pagos pelo juiz.", "Honorários só cabem se não houver contestação."], ans: 1, exp: "Elpídio Donizetti (Vault) e Aula 07: a Corte Especial do STJ (REsp 2.072.206 — 2025) admitiu honorários sucumbenciais na rejeição do IDPJ com contraditório efetivo." },
+  { tag: "Aula ESA", q: "Qual das condutas abaixo exemplifica a confusão patrimonial (art. 50, § 2º, CC)?", opts: ["Abertura de filial em outro estado.", "Separação contábil rigorosa entre empresa e sócio.", "Contratação de empréstimo em nome da sociedade para aquisição de bem de uso pessoal do sócio ou pagamento repetitivo de obrigações pessoais pela empresa.", "Queda de faturamento por crise econômica.", "Contratação de novos empregados."], ans: 2, exp: "CC, art. 50, § 2º, I a III: confusão patrimonial é a ausência de separação de fato entre os patrimônios." },
+  { tag: "Aula ESA", q: "O que caracteriza a desconsideração indireta (ou econômica) em grupos empresariais?", opts: ["Atingir bens pessoais do sócio oculto.", "Desconsiderar a personalidade jurídica de uma empresa devedora para atingir o patrimônio de outra empresa do mesmo grupo econômico, preenchidos os requisitos legais.", "Responsabilizar automaticamente qualquer empresa pelo simples fato de pertencer ao grupo.", "Extinguir todas as empresas do grupo.", "Transferir dívidas trabalhistas para consumidores."], ans: 1, exp: "Desconsideração indireta alcança outra empresa do grupo econômico, mas exige os requisitos do art. 50 do CC (art. 50, § 4º; STJ fev./2025)." },
+  { tag: "Aula ESA", q: "O que caracteriza a desconsideração expansiva da personalidade jurídica?", opts: ["Atingir o patrimônio da PJ por dívida pessoal do sócio.", "Atingir o patrimônio de sócio oculto (que se vale de 'laranja' ou testa de ferro), mesmo não constando no contrato social.", "Expandir o objeto social da empresa.", "Aumentar o prazo de defesa para 30 dias.", "Incluir todos os credores no polo ativo."], ans: 1, exp: "A desconsideração expansiva busca alcançar o patrimônio do verdadeiro proprietário/sócio oculto por trás de interpostas pessoas." },
+  { tag: "Aula ESA", q: "Na Teoria Menor da desconsideração (art. 28, § 5º, do CDC), o que é suficiente para que o consumidor possa atingir o patrimônio dos sócios?", opts: ["Prova rigorosa de fraude contábil.", "Comprovação de desvio de finalidade e confusão patrimonial cumulativos.", "Decretação prévia de falência.", "Que a personalidade jurídica seja obstáculo ao ressarcimento dos prejuízos causados ao consumidor (como a inexistência de bens da PJ).", "Autorização prévia do Ministério Público."], ans: 3, exp: "CDC, art. 28, § 5º, e STJ: dispensa prova de desvio de finalidade ou confusão patrimonial." },
+  { tag: "Aula ESA", q: "Se o primeiro incidente de desconsideração da personalidade jurídica foi extinto por questão meramente processual (ex.: falta de recolhimento de custas), sem análise do mérito:", opts: ["Opera-se coisa julgada material definitiva.", "Não há impedimento para a formulação de novo requerimento de desconsideração.", "O credor perde o direito ao crédito principal.", "Só cabe ação rescisória.", "O juiz deve instaurar novo incidente de ofício."], ans: 1, exp: "STJ (2024): a preclusão/imutabilidade refere-se à decisão de mérito transitada em julgado; extinção sem mérito não impede novo pedido." },
+  { tag: "Aula ESA", q: "Qual é a posição do art. 10 da Lei nº 9.099/1995 em relação à intervenção de terceiros nos Juizados Especiais?", opts: ["Permite todas as intervenções de terceiros.", "Veda qualquer forma de intervenção de terceiro e assistência (admitindo litisconsórcio), regra excepcionada pelo art. 1.062 do CPC quanto ao IDPJ.", "Prevê apenas a denunciação da lide.", "Prevê apenas o chamamento ao processo.", "Não menciona intervenção de terceiros."], ans: 1, exp: "Lei nº 9.099/1995, art. 10, c/c CPC, art. 1.062." },
+  { tag: "Aula ESA", q: "Qual foi o impacto prático da inclusão do IDPJ no CPC/2015 em comparação com a prática anterior?", opts: ["Aboliu a possibilidade de desconsideração.", "Passou a exigir a instauração de incidente processual com citação e contraditório prévio (salvo quando pedido na inicial).", "Eliminou a necessidade de citação dos sócios.", "Tornou a decisão irrecorrível.", "Transferiu a competência para a Junta Comercial."], ans: 1, exp: "CPC, arts. 133 a 137: substituiu o redirecionamento informal sem contraditório por incidente regulado." },
+  { tag: "Aula ESA", q: "Qual enunciado do Conselho da Justiça Federal (CJF) estabelece que o procedimento do IDPJ aplica-se a todas as modalidades de desconsideração?", opts: ["Enunciado 11 do CJF.", "Enunciado 500 do CJF.", "Enunciado 1 do CJF.", "Enunciado 999 do CJF.", "Enunciado 700 do CJF."], ans: 0, exp: "Enunciado 11 do CJF (citado na aula): o procedimento do IDPJ aplica-se às demais modalidades (inversa, expansiva, indireta)." },
+  { tag: "Aula ESA", q: "Na visão do STJ (fev./2025) sobre grupos econômicos à luz do art. 50, § 4º, do CC:", opts: ["O simples pertencimento ao mesmo grupo econômico gera responsabilidade solidária automática.", "A mera integração no mesmo grupo econômico não autoriza a desconsideração nem a responsabilização solidária sem os requisitos legais.", "Grupos econômicos não podem sofrer IDPJ em nenhuma hipótese.", "Basta o inadimplemento de uma empresa do grupo.", "Apenas a empresa controladora responde automaticamente."], ans: 1, exp: "CC, art. 50, § 4º, e STJ (fev./2025): a mera existência de grupo econômico não autoriza a desconsideração sem prova de abuso." },
+
+  // 26-50: Aprofundamento em Lei Seca (CPC, CC, CDC) e Doutrina do Vault (Elpídio Donizetti / Concurso)
+  { tag: "CPC Art. 133", q: "Pode o juiz instaurar o Incidente de Desconsideração da Personalidade Jurídica (IDPJ) de ofício (art. 133, CPC)?", opts: ["Sim, em qualquer fase da execução.", "Sim, nas relações de consumo.", "Não. O CPC exige requerimento da parte ou do Ministério Público quando lhe couber intervir.", "Sim, se o réu for revel.", "Sim, nos Juizados Especiais."], ans: 2, exp: "CPC, art. 133, caput: 'será instaurado a pedido da parte ou do Ministério Público, quando lhe couber intervir no processo'. Vedada atuação de ofício." },
+  { tag: "CPC Art. 134", q: "Em quais momentos/fases processuais é cabível o IDPJ (art. 134, caput, CPC)?", opts: ["Apenas na execução de título extrajudicial.", "Apenas no cumprimento de sentença.", "Em todas as fases do processo de conhecimento, no cumprimento de sentença e na execução fundada em título executivo extrajudicial.", "Somente antes da sentença.", "Apenas em grau recursal."], ans: 2, exp: "CPC, art. 134, caput: cabível em todas as fases do conhecimento, no cumprimento de sentença e na execução extrajudicial." },
+  { tag: "CPC Art. 134", q: "Quando a desconsideração da personalidade jurídica é requerida já na PETIÇÃO INICIAL (art. 134, §§ 2º e 3º, CPC):", opts: ["Instaura-se incidente apartado e suspende-se o processo.", "Dispensa-se a instauração do incidente, cita-se desde logo o sócio ou a pessoa jurídica e NÃO há suspensão do processo.", "O pedido é indeferido liminarmente por inadequação da via.", "O processo fica suspenso por 180 dias.", "Só pode ser apreciado na execução."], ans: 1, exp: "CPC, art. 134, §§ 2º e 3º: requerido na inicial, dispensa incidente autônomo e não suspende o processo." },
+  { tag: "CPC Art. 134", q: "Instaurado o IDPJ no curso do processo, qual providência registral imediata é determinada pelo art. 134, § 1º, do CPC?", opts: ["Baixa do CNPJ na Receita Federal.", "Comunicação imediata ao distribuidor para as anotações devidas.", "Bloqueio imediato de contas antes da citação.", "Comunicação obrigatória ao Banco Central.", "Publicação de edital em jornal."], ans: 1, exp: "CPC, art. 134, § 1º: 'A instauração do incidente será imediatamente comunicada ao distribuidor para as anotações devidas.'" },
+  { tag: "CPC Art. 136", q: "Qual é a natureza jurídica do pronunciamento que resolve o IDPJ e qual o recurso cabível em primeiro grau (arts. 136 e 1.015, IV, CPC)?", opts: ["Sentença; apelação.", "Despacho; irrecorrível.", "Decisão interlocutória; agravo de instrumento.", "Acórdão; recurso especial.", "Decisão interlocutória; apelação."], ans: 2, exp: "CPC, art. 136, caput, c/c art. 1.015, IV: decisão interlocutória impugnável por agravo de instrumento." },
+  { tag: "CPC Art. 136", q: "Se a decisão que resolve o IDPJ for proferida originariamente por RELATOR em tribunal (art. 136, parágrafo único, CPC), qual é o recurso cabível?", opts: ["Agravo de instrumento.", "Apelação.", "Agravo interno.", "Embargos infringentes.", "Recurso ordinário."], ans: 2, exp: "CPC, art. 136, parágrafo único: 'Se a decisão for proferida pelo relator, cabe agravo interno.'" },
+  { tag: "CPC Art. 137", q: "Acolhido o pedido de desconsideração, qual é a consequência prevista no art. 137 do CPC quanto à alienação ou oneração de bens havida em fraude à execução?", opts: ["É nula de pleno direito perante toda a sociedade.", "Será ineficaz em relação ao requerente.", "É válida e eficaz se registrada em cartório.", "Gera apenas multa de 5% sem atingir o bem.", "Depende de ação pauliana autônoma."], ans: 1, exp: "CPC, art. 137: a alienação ou oneração de bens em fraude de execução será ineficaz em relação ao requerente." },
+  { tag: "CC Art. 50", q: "Nos termos do art. 50, § 5º, do Código Civil (Lei da Liberdade Econômica), a mera expansão ou alteração da finalidade original da atividade econômica específica da pessoa jurídica:", opts: ["Configura desvio de finalidade automático.", "Configura confusão patrimonial presumida.", "NÃO constitui desvio de finalidade.", "Autoriza desconsideração de ofício.", "Torna os sócios solidariamente responsáveis."], ans: 2, exp: "CC, art. 50, § 5º: não constitui desvio de finalidade a mera expansão ou alteração da finalidade original da atividade econômica." },
+  { tag: "CC Art. 50", q: "Segundo o art. 50, § 1º, do Código Civil, como se define 'desvio de finalidade'?", opts: ["Qualquer prejuízo financeiro da sociedade.", "A utilização da pessoa jurídica com o propósito de lesar credores e para a prática de atos ilícitos de qualquer natureza.", "A contratação de empréstimos bancários pela empresa.", "A mudança de endereço da sede social.", "A distribuição regular de lucros aos sócios."], ans: 1, exp: "CC, art. 50, § 1º: utilização da PJ com o propósito de lesar credores e para a prática de atos ilícitos de qualquer natureza." },
+  { tag: "CC Art. 50", q: "Pelo art. 50, § 2º, II, do Código Civil, a transferência de ativos ou de passivos sem efetivas contraprestações caracteriza confusão patrimonial, EXCETO:", opts: ["Se ocorrer entre empresas do mesmo grupo.", "Os de valor proporcionalmente insignificante.", "Se aprovada em assembleia.", "Se o sócio for majoritário.", "Se houver dívida tributária."], ans: 1, exp: "CC, art. 50, § 2º, II: ressalva expressamente os ativos ou passivos de valor proporcionalmente insignificante." },
+  { tag: "CC Art. 50", q: "De acordo com o art. 50, caput, do Código Civil, a extensão das obrigações na desconsideração atinge os bens particulares de:", opts: ["Todos os empregados da empresa.", "Administradores ou sócios da pessoa jurídica beneficiados direta ou indiretamente pelo abuso.", "Qualquer parente dos sócios até o 4º grau.", "Exclusivamente do contador da empresa.", "Todos os clientes da pessoa jurídica."], ans: 1, exp: "CC, art. 50, caput: bens particulares de administradores ou de sócios beneficiados direta ou indiretamente pelo abuso." },
+  { tag: "CDC Art. 28", q: "Segundo o art. 28, § 2º, do CDC, qual é a natureza da responsabilidade das sociedades integrantes dos grupos societários e das sociedades controladas pelas obrigações consumeristas?", opts: ["Solidária.", "Subsidiária.", "Inexistente.", "Apenas por dolo comprovado.", "Limitada a 10% do capital."], ans: 1, exp: "CDC, art. 28, § 2º: são subsidiariamente responsáveis pelas obrigações decorrentes do CDC." },
+  { tag: "CDC Art. 28", q: "Conforme o art. 28, § 3º, do CDC, qual é a natureza da responsabilidade das sociedades CONSORCIADAS pelas obrigações decorrentes do CDC?", opts: ["Subsidiária.", "Apenas por culpa.", "Solidária.", "Exclusiva da empresa líder.", "Inexistente."], ans: 2, exp: "CDC, art. 28, § 3º: 'As sociedades consorciadas são solidariamente responsáveis pelas obrigações decorrentes deste Código.'" },
+  { tag: "CDC Art. 28", q: "De acordo com o art. 28, § 4º, do CDC, como respondem as sociedades COLIGADAS pelas obrigações consumeristas?", opts: ["Objetiva e solidariamente.", "Só responderão por culpa.", "Subsidiariamente sem culpa.", "Não respondem em nenhuma hipótese.", "Apenas em caso de falência."], ans: 1, exp: "CDC, art. 28, § 4º: 'As sociedades coligadas só responderão por culpa.'" },
+  { tag: "CDC Art. 28", q: "Além do § 5º (Teoria Menor), o caput do art. 28 do CDC prevê a efetivação da desconsideração também quando houver falência, estado de insolvência, encerramento ou inatividade da PJ provocados por:", opts: ["Caso fortuito.", "Má administração.", "Variação cambial.", "Concorrência de mercado.", "Decisão judicial."], ans: 1, exp: "CDC, art. 28, caput, parte final: 'provocados por má administração'." },
+  { tag: "Doutrina Vault", q: "Segundo a observação terminológica de Elpídio Donizetti (Vault — Cap. 5), na desconsideração da personalidade jurídica:", opts: ["A pessoa jurídica é anulada e extinta.", "A pessoa jurídica permanece válida e operante, ocorrendo ampliação subjetiva da responsabilidade patrimonial.", "O contrato social é rescindido automaticamente.", "Os sócios perdem a qualidade de pessoas naturais.", "O processo é convertido em falência."], ans: 1, exp: "Elpídio Donizetti (Cap. 5): não se extingue a PJ; há ampliação subjetiva da responsabilidade patrimonial." },
+  { tag: "Doutrina Vault", q: "Se a desconsideração for requerida na petição inicial (dispensando incidente — art. 134, § 2º, CPC) e for decidida apenas no dispositivo da SENTENÇA, qual recurso caberá (Elpídio Donizetti, Cap. 5)?", opts: ["Agravo de instrumento.", "Apelação.", "Agravo interno.", "Mandado de segurança.", "Embargos à execução."], ans: 1, exp: "Elpídio Donizetti (Cap. 5): decidida na sentença, a impugnação ocorre por meio de apelação." },
+  { tag: "Doutrina Vault", q: "Nos Juizados Especiais, quando o IDPJ é decidido incidentalmente na fase de EXECUÇÃO (sem sentença terminativa), qual via impugnativa é admitida pela doutrina e jurisprudência registradas no Vault (Cap. 12 — Donizetti)?", opts: ["Recurso especial direto ao STJ.", "Mandado de Segurança perante a Turma Recursal (Súmula 376/STJ), ou agravo onde previsto em regimento.", "Apelação ao Tribunal de Justiça.", "Ação rescisória.", "Nenhuma, pois é irrecorrível em absoluto."], ans: 1, exp: "Donizetti (Cap. 12): diante da irrecorribilidade das interlocutórias nos Juizados, admite-se MS perante a Turma Recursal (Súmula 376/STJ) ou agravo onde previsto em regimento." },
+  { tag: "Doutrina Vault", q: "Segundo Elpídio Donizetti (Vault — Cap. 5), a desconsideração inversa (art. 133, § 2º, CPC) é especialmente frequente em execuções de dívidas civis e em:", opts: ["Ações criminais de contravenção.", "Partilhas no Direito de Família, quando o cônjuge/sócio esvazia seus bens pessoais na sociedade (STJ, REsp 948.117/MS e REsp 1.236.916/RS).", "Ações populares.", "Execuções fiscais de IPTU de terceiros.", "Ações de usucapião rural."], ans: 1, exp: "Elpídio Donizetti (Cap. 5): cita expressamente o uso da desconsideração inversa em dívidas civis e partilhas no Direito de Família (STJ, REsp 948.117/MS e REsp 1.236.916/RS)." },
+  { tag: "CPC Art. 134", q: "De acordo com o art. 134, § 4º, do CPC, o requerimento de instauração do IDPJ deve:", opts: ["Apenas mencionar que o credor não recebeu o pagamento.", "Demonstrar o preenchimento dos pressupostos legais específicos para a desconsideração da personalidade jurídica.", "Ser assinado por todos os sócios da empresa ré.", "Ser precedido de inquérito policial.", "Indicar necessariamente bens imóveis penhoráveis."], ans: 1, exp: "CPC, art. 134, § 4º: 'O requerimento deve demonstrar o preenchimento dos pressupostos legais específicos para desconsideração da personalidade jurídica.'" },
+  { tag: "CPC Art. 137", q: "Segundo Elpídio Donizetti (Vault — Cap. 5), a ineficácia da alienação de bens em fraude à execução reconhecida no acolhimento do IDPJ (art. 137 c/c art. 792, IV, CPC) opera com efeitos:", opts: ["Apenas para o futuro (ex nunc), a partir do trânsito em julgado do IDPJ.", "Retroativos (ex tunc), à data da citação originária.", "Apenas sobre bens móveis.", "Condicionados à concordância do comprador.", "Limitados a 50% do valor do bem."], ans: 1, exp: "Elpídio Donizetti (Cap. 5): eficácia ex tunc à data da citação originária (art. 137 c/c art. 792, IV, CPC)." },
+  { tag: "Doutrina Vault", q: "Além do Direito do Consumidor (art. 28, § 5º, CDC), em qual outra seara a doutrina do Vault (Elpídio Donizetti, Cap. 5) aponta a incidência da Teoria Menor da desconsideração?", opts: ["Direito Ambiental.", "Direito Cambiário.", "Direito Eleitoral.", "Direito Marítimo.", "Direito Notarial."], ans: 0, exp: "Elpídio Donizetti (Cap. 5): Teoria Menor aplica-se nas searas de consumidor (CDC) e meio ambiente (Lei Ambiental)." },
+  { tag: "CPC Art. 133", q: "O Ministério Público tem legitimidade para requerer a instauração do IDPJ (art. 133, caput, CPC)?", opts: ["Não, apenas as partes privadas.", "Sim, sempre e em qualquer processo cível.", "Sim, quando lhe couber intervir no processo.", "Apenas em ações penais.", "Apenas na Justiça Federal."], ans: 2, exp: "CPC, art. 133, caput: a pedido da parte ou do Ministério Público, quando lhe couber intervir no processo." },
+  { tag: "Doutrina Vault", q: "No julgamento do REsp 2.072.206 (Corte Especial do STJ — 2025, Vault), qual princípio fundamentou a condenação do requerente em honorários sucumbenciais na rejeição do IDPJ?", opts: ["Princípio da fungibilidade recursal.", "Princípio da causalidade e existência de pretensão resistida autônoma, remunerando o advogado do terceiro indevidamente acionado.", "Princípio da insignificância.", "Princípio da identidade física do juiz.", "Princípio da indisponibilidade."], ans: 1, exp: "Elpídio Donizetti (Cap. 5): Corte Especial do STJ (REsp 2.072.206) aplicou o princípio da causalidade diante da pretensão resistida autônoma." },
+  { tag: "Revisão Geral", q: "Assinale a alternativa INTEIRAMENTE CORRETA sobre o IDPJ no CPC/2015 e na jurisprudência do STJ:", opts: ["Pode ser instaurado de ofício pelo juiz na execução e suspende todas as buscas contra a empresa.", "É vedado nos Juizados Especiais por força do art. 10 da Lei nº 9.099/1995.", "Exige requerimento da parte ou do MP, garante contraditório em 15 dias, é cabível nos Juizados Especiais (art. 1.062), não suspende a execução contra os executados originários (STJ, fev./2025) e resolve-se por decisão interlocutória agravável (art. 1.015, IV).", "A mera existência de grupo econômico autoriza a desconsideração pelo art. 50, § 4º, do CC.", "A decisão que resolve o IDPJ em primeiro grau é impugnável por apelação."], ans: 2, exp: "Síntese exata dos arts. 133, 134, 135, 136, 1.015, IV, e 1.062 do CPC, c/c entendimento do STJ (fev./2025)." }
+];
+
+const state = {};
+function renderQuiz() {
+  const container = document.getElementById("quizContainer");
+  container.innerHTML = "";
+  const letters = ["A", "B", "C", "D", "E"];
+  QUESTIONS.forEach((item, idx) => {
+    const card = document.createElement("div");
+    card.className = "q-card";
+    const optsHtml = item.opts.map((opt, oi) =>
+      `<button class="opt-btn" id="q${idx}_o${oi}" onclick="answer(${idx}, ${oi})"><strong>${letters[oi]}.</strong> ${opt}</button>`
+    ).join("");
+    card.innerHTML = `
+      <div class="q-head"><span class="q-tag">${item.tag}</span>${idx + 1}. ${item.q}</div>
+      ${optsHtml}
+      <div class="q-exp" id="q${idx}_exp"><strong>Gabarito (${letters[item.ans]}):</strong> ${item.exp}</div>`;
+    container.appendChild(card);
+  });
+  updateScore();
+}
+function answer(qi, oi) {
+  if (state[qi] !== undefined) return;
+  state[qi] = oi;
+  const item = QUESTIONS[qi];
+  for (let i = 0; i < item.opts.length; i++) {
+    const btn = document.getElementById(`q${qi}_o${i}`);
+    btn.disabled = true;
+    if (i === item.ans) btn.classList.add("correct");
+    else if (i === oi) btn.classList.add("wrong");
+  }
+  document.getElementById(`q${qi}_exp`).classList.add("show");
+  updateScore();
+}
+function updateScore() {
+  const answered = Object.keys(state).length;
+  const correct = Object.entries(state).filter(([qi, oi]) => QUESTIONS[qi].ans === oi).length;
+  document.getElementById("scoreBox").textContent = `Respondidas: ${answered} / ${QUESTIONS.length} · Acertos: ${correct}`;
+}
+function resetQuiz() {
+  Object.keys(state).forEach(k => delete state[k]);
+  renderQuiz();
+}
+renderQuiz();
+</script>
+</body>
+</html>
